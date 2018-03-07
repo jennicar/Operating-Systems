@@ -21,12 +21,10 @@ public class HungryMan implements Runnable{
     public void mealTime(){
         System.out.println(name + " is ready to eat!");
         synchronized(fork){
-            for (int i = 1; i <= 5; i++){
-                System.out.println(name + " took " + i + " bites");
-                }
             synchronized(cup){
-                for (int i = 1; i <= 5; i++){
-                    System.out.println(name + " had " + i + " sips");
+                for (int i = 1; i <= 10; i++){
+                    System.out.println(name + " took " + i + " bites YUM");
+                    System.out.println(name + " had " + i + " sips MMM");
                 }
             }
         }
