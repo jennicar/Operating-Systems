@@ -20,9 +20,6 @@ This file system example reads files from a directory and prints out its content
 // gets the attributes of the file, returns 0 on success
 static int do_getattr(const char *path, struct stat *st){
   printf("calling getattr()\n");
-  // gets the user id (uid) and group id (gid) of the user who mounted the file system
-  st->st_uid = getuid();
-  st->st_gid = getgid();
 
   // mode specifies its type (file, directory, etc.)
   // and the permission bits of the file
