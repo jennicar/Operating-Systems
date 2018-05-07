@@ -1,0 +1,9 @@
+COMPILER = gcc
+FILESYSTEM_FILES = SFS.c
+
+build: $(FILESYSTEM_FILES)
+	$(COMPILER) $(FILESYSTEM_FILES) -o SFS `pkg-config fuse --cflags --libs`
+	echo 'To Mount: ./SFS -f [mount point]'
+
+clean:
+	rm SFS
